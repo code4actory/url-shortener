@@ -12,7 +12,7 @@ var router = express.Router()
 
 // define the home page route
 router.get('/', function (req, res) {
-    res.send("hello");
+    res.redirect('http://localhost:3000/');
 })
 
 // define the home page route
