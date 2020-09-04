@@ -55,7 +55,7 @@ router.post('/short-url', async(req, res) => {
 
         //return short if long url already exist
         if(url)
-        return res.status(201).json({shortUrl: url.shortUrl.toLowerCase()});
+        return res.status(201).json({shortUrl: url.shortUrl});
 
         //generate new url and persist
         const urlCode = shortid.generate();
@@ -67,7 +67,7 @@ router.post('/short-url', async(req, res) => {
         
         //save and return short url
         await url.save()
-        return res.status(201).json({shortUrl: url.shortUrl.toLowerCase()});
+        return res.status(201).json({shortUrl: url.shortUrl});
 
 
     } catch (err){
