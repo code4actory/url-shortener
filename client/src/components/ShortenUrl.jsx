@@ -100,7 +100,7 @@ const ShortenUrl = () => {
               })
               .then(function (response) {
                
-                setNotifier(response.data.shortUrl)
+                setNotifier("http://localhost:3000/" + response.data.shortUrl)
               })
               .catch(function (error) {
                 setNotifier(error.message);

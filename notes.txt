@@ -1,0 +1,5 @@
+1. Application persistence is mongodb
+2. All necessary username and password is stored in the .env file
+3. Client is proxy to server
+4. Server running on port 5000
+5. client running on port 3000
